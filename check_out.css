@@ -1,0 +1,374 @@
+body {
+    background-color: rgb(249 252 255);
+    max-width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.checkout_form__heading {
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.checkout_form__subheading {
+    margin-top: 3px;
+    margin-bottom: 40px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.checkout_form__wrapper {
+    background-color: #fff;
+    max-width: 900px;
+    margin-inline: auto;
+    margin-top: 40px;
+    /* padding-top: 35px; */
+    /* padding-inline: 30px; */
+    border-radius: 4px;
+    box-shadow: 2px 2px 10px rgb(226, 226, 226);
+    display: flex;
+    box-sizing: border-box;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+form input,
+form select {
+    margin-bottom: 20px;
+    background-color: rgb(245 247 249);
+    height: 40px;
+    border: none;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.checkout__prices p.rate {
+    color: #b7b1b1;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 0;
+}
+
+.iti {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+ul#iti-0__country-listbox {
+    width: unset;
+}
+
+form label {
+    margin-bottom: 7px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.checkout__prices {
+    background: rgb(245 247 249);
+    padding: 35px 30px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.offers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    /* width: 90%; */
+    margin-inline: auto;
+}
+
+.offers label {
+    background-color: #fff;
+    width: calc((100% - 36px) /3);
+    padding-block: 15px;
+    border: 1px solid rgb(240, 239, 239);
+    padding-left: 10px;
+    color: rgb(212 205 233);
+    margin-bottom: 0;
+}
+
+.offers input[type="radio"]:checked+label {
+    border: 1px solid blue;
+}
+
+.offers input {
+    display: none;
+}
+
+label {
+    color: rgb(212 205 233);
+    font-size: small;
+}
+
+.checkout__form {
+    padding: 35px 40px;
+    width: 55%;
+}
+
+label span {
+    color: rgb(0, 0, 0);
+}
+
+.address_code {
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkout__prices p {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+#postalCode,
+#city,
+#country {
+    width: 28%;
+}
+
+.payment-method {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+input[type="radio"] {
+    width: 15px;
+    height: 15px;
+    margin: 0;
+}
+
+.payment_method__label {
+    font-size: 12px;
+    margin: 0px;
+}
+
+.payment-method label:has(img) {
+    height: 40px;
+    width: auto;
+    margin: 0;
+}
+
+.payment-method label:has(img) img {
+    width: auto;
+    height: 100%;
+}
+
+.payment-container {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin-top: 10px;
+    padding: 5px;
+    width: 100%;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.card-details {
+    display: none;
+}
+
+.toggle-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: #f5f5f5;
+    gap: 15px;
+    margin-top: 15px;
+    margin-inline-start: 15px;
+}
+
+.toggle-switch input {
+    display: none;
+}
+
+.toggle-container p {
+    margin-bottom: 0;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 19px;
+    margin-bottom: 0;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    border-radius: 34px;
+    transition: background-color 0.3s ease;
+    border: 1px solid rgb(223, 222, 222);
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    background-color: rgb(148, 146, 146);
+    border-radius: 50%;
+    top: 3px;
+    left: 4px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-switch input:checked+.slider {
+    background-color: #e5e5e6;
+}
+
+.toggle-switch input:checked+.slider::before {
+    transform: translateX(12px);
+}
+
+.prices_and__discount {
+    margin-top: 40px;
+    border-bottom: 2px solid #fff;
+}
+
+.prices_and__discount div,
+.total__price div {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1rem;
+    margin-bottom: 25px;
+    align-items: center;
+}
+
+.regular__price {
+    text-decoration: line-through;
+}
+
+div.prices_and__discount div.discout p {
+    color: rgb(128 212 55);
+}
+
+div.prices_and__discount div.discout p:last-child {
+    font-size: 22px;
+    margin: 0;
+    font-weight: 700;
+}
+
+.prices_and__discount div p:first-child {
+    color: rgb(169, 167, 175);
+    font-size: 14px;
+}
+
+.prices_and__discount div p:last-child {
+    font-size: 16px;
+}
+
+.total__price div p:first-child {
+    color: rgb(169, 167, 175);
+    font-size: 14px;
+}
+
+.total__price div p:last-child {
+    font-size: 22px;
+    color: rgb(85 97 238);
+    font-weight: 700;
+}
+
+.total__price {
+    margin-top: 30px;
+}
+
+.prices_and__discount p,
+.total__price p {
+    margin: 0;
+}
+
+.order__btn {
+    background-color: #5b8af7;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+.checkbox-text {
+    font-size: 14px;
+    color: #b7b1b1;
+    line-height: 1.5;
+}
+
+.checkout__form label {
+    margin-bottom: 5px;
+}
+
+.checkbox-text a {
+    text-decoration: none;
+    color: #469af3;
+    font-weight: 500;
+}
+
+.checkbox-text a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width:749px) {
+    .checkout_form__wrapper {
+        flex-direction: column;
+        width: 95%;
+    }
+    .checkout__prices,
+    .checkout__form {
+        width: 100%;
+        padding-inline: 15px;
+    }
+    .checkout__form {
+        margin-bottom: 20px;
+    }
+    form input {
+        width: 100%;
+    }
+}

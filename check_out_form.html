@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="check_out.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+</head>
+
+<body>
+    <div class="main__wrapper">
+        <div class="checkout_form__wrapper">
+            <form class="form">
+                <div class="checkout__form">
+                    <h1 class="checkout_form__heading">
+                        Registration & Booking at GoStudent
+                    </h1>
+                    <p class="checkout_form__subheading">
+                        The leading platform for online tutoring
+                    </p>
+                    <label for="loginPhoneNumber">LOGIN PHONE NUMBER
+                        <span>(preferably <span class="underline">the student's</span>)</span>
+                    </label>
+                    <input id="loginPhoneNumber" type="tel" required />
+                    <label for="contactPhoneNumber">CONTACT PHONE NUMBER
+                        <span>(preferably <span class="underline">the parent's</span>)</span>
+                    </label>
+                    <input id="contactPhoneNumber" type="tel" required />
+                    <label for="emailAddress">CONTACT EMAIL ADDRESS
+                        <span>(preferably <span class="underline">the parent's</span>)</span>
+                    </label>
+                    <input id="emailAddress" type="email" required />
+                    <label for="contactName">CONTACT NAME</label>
+                    <input id="contactName" type="text" required />
+                    <label for="address">BILLING ADDRESS</label>
+                    <input id="address" type="text" required />
+
+                    <div class="address_code">
+                        <input id="postalCode" type="text" placeholder="Postal code" required />
+                        <input id="city" type="text" placeholder="City" required />
+                        <select id="country" required>
+                            <option value="Egypt">Egypt</option>
+                            <option value="Morocco">Morocco</option>
+                            <option value="UK">UK</option>
+                            <option value="USA">USA</option>
+                        </select>
+                    </div>
+                    <label for="sessions">MONTHLY SESSIONS</label>
+                    <select id="sessions" required>
+                        <option value="8">8 sessions</option>
+                        <option value="10">10 session</option>
+                        <option value="12">12 sessions</option>
+                    </select>
+                    <p class="payment_method__label">SELECT PAYMENT METHOD</p>
+                    <div class="payment-container">
+                        <div class="payment-method">
+                            <input type="radio" id="sepa" name="payment" required />
+                            <label for="sepa">
+                                <img src="assets/pngegg.png" alt="SEPA" />
+                            </label>
+                        </div>
+                        <div class="card-details-sepa" id="sepaFields" style="display: none;">
+                            <span>SEPA</span>
+                            <input type="text" id="sepaCardHolder" placeholder="Card holder" />
+                            <input type="text" id="sepaCardNumber" placeholder="1234 5678 9012 3456" maxlength="19" />
+                        </div>
+                        <div class="payment-method">
+                            <input type="radio" id="card" name="payment" required />
+                            <label for="card">
+                                <img src="assets/Visa-Card-Logo-No-Background-Clip-Art.png" alt="VISA" />
+                            </label>
+                        </div>
+                        <div class="card-details-visa" id="cardFields" style="display: none;">
+                            <span>VISA</span>
+                            <input type="text" id="visaCardHolder" placeholder="Card holder" />
+                            <input type="text" id="visaCardNumber" placeholder="1234 5678 9012 3456" maxlength="19" />
+                        </div>
+                    </div>
+
+                </div>
+                <div class="checkout__prices">
+                    <div>
+                        <p>Order overview</p>
+                        <div class="offers">
+                            <input data-discount="4" type="radio" id="6Months" name="subscription" checked required />
+                            <label for="6Months">6 Months</label>
+
+                            <input data-discount="3" type="radio" id="9Months" name="subscription" required />
+                            <label for="9Months">9 Months</label>
+
+                            <input data-discount="2" type="radio" id="12Months" name="subscription" required />
+                            <label for="12Months">12 Months</label>
+
+                            <input data-discount="1.5" type="radio" id="18Months" name="subscription" required />
+                            <label for="18Months">18 Months</label>
+
+                            <input data-discount="1" type="radio" id="24Months" name="subscription" required />
+                            <label for="24Months">24 Months</label>
+
+                            <input data-discount="0.5" type="radio" id="36Months" name="subscription" required />
+                            <label for="36Months">36 Months</label>
+                        </div>
+                        <div class="toggle-container">
+                            <label class="toggle-switch">
+                                <input data-discount="5" type="checkbox" />
+                                <span class="slider"></span>
+                            </label>
+                            <p>Pay in advance - Extra 5% Discount</p>
+                        </div>
+                        <div class="prices_and__discount">
+                            <div>
+                                <p>NUMBER OF SESSIONS P.M</p>
+                                <p class="session__number">8</p>
+                            </div>
+                            <div>
+                                <p>REGULAR PRICE</p>
+                                <p class="regular__price">29.60$</p>
+                            </div>
+                            <div>
+                                <p>YOUR PRICE</p>
+                                <p class="actual__price">00.00$</p>
+                            </div>
+                            <div class="discout">
+                                <p>discount <span class="discount__percentage"></span></p>
+                                <p class="discount__amount">8</p>
+                            </div>
+                        </div>
+                        <div class="total__price">
+                            <div>
+                                <p>Setup fees</p>
+                                <p>00.00$</p>
+                            </div>
+                            <div>
+                                <p>TOTAL P.M</p>
+                                <p class="total__price__amount">00.00$</p>
+                            </div>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="terms" required />
+                            <label for="terms" class="checkbox-text">
+                                I accept the <a href="#">Terms & Conditions</a> and understand
+                                my <a href="#">right of withdrawal</a> as well as the
+                                circumstances that lead to a repeal of the same.
+                            </label>
+                        </div>
+                        <div>
+                            <button class="order__btn">Order Now</button>
+                        </div>
+                    </div>
+                    <p class="rate">95% satisficatoin rate!</p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="checkout.js"></script>
+
+</html>
